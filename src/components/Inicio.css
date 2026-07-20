@@ -3,14 +3,13 @@
 .inicio-wrapper {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   padding: 2rem;
   box-sizing: border-box;
   background-color: var(--color-bg-primary);
-  overflow: hidden;
-  /* Asegura que el fondo binario no cause scroll */
+  overflow-x: hidden;
 }
 
 .binary-background {
@@ -129,6 +128,8 @@
   margin: 1rem 0;
   font-family: 'Courier New', monospace;
   font-weight: 600;
+  max-width: 100%;
+  text-overflow: ellipsis;
 }
 
 .blinking-cursor {
@@ -234,6 +235,7 @@
   left: 15px;
   color: var(--color-accent);
   font-weight: bold;
+  pointer-events: none;
 }
 
 .cv-button::after {
@@ -242,6 +244,7 @@
   right: 15px;
   color: var(--color-accent2);
   animation: blink 1s step-end infinite;
+  pointer-events: none;
 }
 
 @keyframes blink {
@@ -275,14 +278,15 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .inicio-wrapper {
-    width: 100vw;
-    padding: 0.5rem 1rem;
-    padding-top: 60px; /* 60px navbar + 12px separación */
+    width: 100%;
+    min-height: 100dvh;
+    padding: 1rem;
+    padding-top: 70px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Pegado arriba, no centrado */
+    justify-content: flex-start;
     overflow-x: hidden;
   }
 
@@ -294,23 +298,21 @@
   }
 
   .foto-container {
-    width: 260px;
-    margin: 0 auto;
-    margin-bottom: 0.5rem;
-    margin-top: 0; /* Sin margen superior para quedar cerca del navbar */
+    width: clamp(180px, 50vw, 260px);
+    margin: 0 auto 0.5rem;
   }
 
   .inicio-foto {
-    width: 260px;
+    width: 100%;
     max-width: 260px;
     min-width: unset;
     display: block;
   }
 
   .marco-foto {
-    display: block; /* Restaurar el marco */
-    top: -10px;
-    left: -10px;
+    display: block;
+    top: -8px;
+    left: -8px;
   }
 
   .typing-animation-container {
@@ -332,6 +334,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .social-links-inicio {
+    gap: 1rem;
+  }
+
+  .social-icon-link-inicio {
+    padding: 0.4rem;
   }
 }
 

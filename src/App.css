@@ -76,14 +76,16 @@
 .reveal-tecnologias.reveal-active .tecnologia-item:nth-child(9) { animation-delay: 0.5s; }
 .reveal-tecnologias.reveal-active .tecnologia-item:nth-child(10) { animation-delay: 0.55s; }
 
-/* 4. Proyectos: Inclinación 3D y entrada desde el fondo */
+/* 4. Proyectos: Entrada desde abajo con desenfoque */
 .reveal-proyectos {
-  transform: perspective(1200px) rotateX(15deg) translateY(50px);
+  transform: translateY(50px);
+  filter: blur(4px);
 }
 
 .reveal-proyectos.reveal-active {
-  transform: perspective(1200px) rotateX(0deg) translateY(0);
-  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(0);
+  filter: blur(0);
+  transition: all 1s ease-out;
 }
 
 /* 5. Contacto: Efecto de revelado desde abajo con desenfoque */

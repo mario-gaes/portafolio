@@ -105,7 +105,7 @@ const Contacto: FunctionComponent<ContactoProps> = ({ onMouseEnter, onMouseLeave
       <h2 className="contacto-title">Contacto</h2>
       <p className="contacto-subtitle">¿Tienes alguna pregunta o quieres colaborar? ¡Envíame un mensaje!</p>
 
-      <form onSubmit={handleSubmit} className="contacto-form">
+        <form onSubmit={handleSubmit} className="contacto-form">
         <div className="form-group">
           <label htmlFor="name" className="form-label">Nombre:</label>
           <input
@@ -116,6 +116,7 @@ const Contacto: FunctionComponent<ContactoProps> = ({ onMouseEnter, onMouseLeave
             onChange={handleChange}
             className={`form-input ${errors.name ? 'input-error' : ''}`}
             disabled={isSubmitting}
+            autoComplete="name"
           />
           {errors.name && <p className="error-message">{errors.name}</p>}
         </div>
@@ -130,6 +131,7 @@ const Contacto: FunctionComponent<ContactoProps> = ({ onMouseEnter, onMouseLeave
             onChange={handleChange}
             className={`form-input ${errors.email ? 'input-error' : ''}`}
             disabled={isSubmitting}
+            autoComplete="email"
           />
           {errors.email && <p className="error-message">{errors.email}</p>}
         </div>

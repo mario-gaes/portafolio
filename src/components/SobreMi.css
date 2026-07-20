@@ -53,6 +53,8 @@
   line-height: 1.7;
   color: var(--color-text-secondary);
   margin-bottom: 1em;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 .who-am-i p:last-child {
   margin-bottom: 0;
@@ -72,8 +74,8 @@
 .soft-skill-item {
   background-color: var(--color-bg-tertiary);
   color: var(--color-text-secondary);
-  padding: 0.7em 1.2em;
-  border-radius: 25px; /* Bordes más redondeados para las pastillas */
+  padding: 0.6em 1em;
+  border-radius: 2em;
   font-size: 0.95em;
   font-weight: 500;
   transition: background-color 0.2s ease;
@@ -90,7 +92,8 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  padding-left: 20px; /* Espacio para la línea vertical */
+  padding-left: 20px;
+  min-height: 200px;
 }
 
 /* Línea vertical */
@@ -98,10 +101,10 @@
   content: '';
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   width: 4px;
-  background-color: var(--color-border); /* Color de la línea */
-  height: 100%;
+  background-color: var(--color-border);
 }
 
 .timeline-item {
@@ -165,7 +168,7 @@
 /* --- Media Queries para responsividad --- */
 
 /* Pantallas pequeñas (teléfonos móviles, menos de 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .sobre-mi-section {
     padding: 3rem 1rem;
   }

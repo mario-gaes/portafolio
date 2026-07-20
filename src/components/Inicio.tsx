@@ -75,7 +75,7 @@ const Inicio: FunctionComponent<InicioProps> = ({ onMouseEnter, onMouseLeave, is
           <div className="inicio-actions">
             <div className="social-links-inicio">
               <a
-                href="https://github.com/mario32111"
+                href="https://github.com/mario-gaes"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`social-icon-link-inicio ${interactiveElementClass}`}

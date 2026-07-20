@@ -140,7 +140,7 @@
 
 /* --- Media Queries para responsividad --- */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .contacto-section {
     padding: 2rem 1rem;
     min-height: 100dvh;
@@ -158,6 +158,7 @@
   .contacto-subtitle {
     font-size: 0.95em;
     margin-bottom: 1.2rem;
+    padding: 0 0.5rem;
   }
 
   .contacto-form {
@@ -176,11 +177,11 @@
   .form-input,
   .form-textarea {
     padding: 0.6rem 0.8rem;
-    font-size: 0.9em;
+    font-size: 16px;
   }
 
   .form-textarea {
-    min-height: 70px;
+    min-height: 80px;
   }
 
   .submit-button {

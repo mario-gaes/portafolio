@@ -10,8 +10,7 @@
   color: var(--color-text-primary);
   text-align: center;
   position: relative;
-  overflow: hidden;
-  /* Evita desbordamiento por animaciones 3D */
+  overflow: visible;
 }
 
 .proyectos-title {
@@ -27,20 +26,19 @@
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 
 .proyectos-slider {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding: 1.5rem calc(50% - 325px);
-  /* Centra la primera y última tarjeta (650px / 2 = 325px) */
+  padding: 1.5rem 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .proyectos-slider::-webkit-scrollbar {
@@ -48,16 +46,17 @@
 }
 
 .proyecto-card {
-  flex: 0 0 650px;
-  /* Más ancho */
+  flex: 1;
+  max-width: 650px;
+  min-width: 300px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 32px;
+  border-radius: 24px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   scroll-snap-align: center;
   position: relative;
   cursor: pointer;
@@ -65,20 +64,20 @@
 
 /* Estado Inactivo (Lados) */
 .proyecto-card.inactive {
-  transform: scale(0.85);
-  opacity: 0.4;
-  filter: grayscale(0.5) blur(1px);
+  transform: scale(0.9);
+  opacity: 0.5;
+  filter: grayscale(0.3);
 }
 
 /* Estado Activo (Centro) */
 .proyecto-card.active {
-  transform: scale(1.05);
+  transform: scale(1.02);
   opacity: 1;
   filter: grayscale(0) blur(0);
   z-index: 10;
   border-color: var(--color-accent);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(var(--color-accent-rgb), 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(var(--color-accent-rgb), 0.15);
 }
 
 .proyecto-card:hover {
@@ -86,15 +85,15 @@
 }
 
 .proyecto-card.active:hover {
-  transform: scale(1.08) translateY(-5px);
+  transform: scale(1.03) translateY(-3px);
 }
 
 .proyecto-image {
   width: 100%;
-  height: 250px;
-  /* Aumentado para mayor visibilidad */
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .proyecto-card:hover .proyecto-image {
@@ -131,6 +130,8 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.2rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .proyecto-tech-tag {
@@ -184,18 +185,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--color-text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
   transition: all 0.3s ease;
 }
 
@@ -203,15 +204,18 @@
   background: var(--color-accent);
   color: var(--color-bg-primary);
   border-color: var(--color-accent);
-  box-shadow: 0 0 20px rgba(var(--color-accent-rgb), 0.4);
+  box-shadow: 0 0 15px rgba(var(--color-accent-rgb), 0.4);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .slider-nav-btn.prev {
-  left: -20px;
+  left: 0;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .slider-nav-btn.next {
-  right: -20px;
+  right: 0;
+  transform: translateY(-50%) translateX(50%);
 }
 
 /* Pagination Dots */
@@ -239,7 +243,29 @@
 
 /* --- Media Queries --- */
 
-@media (max-width: 767px) {
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .proyectos-section {
+    padding: 4rem 1rem;
+    min-height: auto;
+  }
+
+  .proyectos-slider-container {
+    padding: 0 2rem;
+  }
+
+  .proyecto-card {
+    flex: 0 0 500px;
+    max-width: 500px;
+  }
+
+  .proyectos-title {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
   .proyectos-section {
     padding: 2rem 0;
     min-height: 100dvh;
@@ -247,61 +273,62 @@
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    overflow: visible; /* Permitir que el slider se desborde para scroll */
+    overflow: visible;
   }
 
   .proyectos-slider-container {
-    padding: 0; /* Sin padding lateral para que el slider use todo el ancho */
+    padding: 0;
     width: 100%;
-    overflow: hidden; /* Solo clip visual, no bloquea el scroll del hijo */
+    overflow: visible;
   }
 
   .proyecto-card {
-    flex: 0 0 78vw; /* ~80% de la pantalla para que solo se vea 1 proyecto */
+    flex: 0 0 85vw;
+    min-width: 280px;
+    max-width: 400px;
   }
 
   .proyecto-image {
-    height: 180px;
-    /* También un poco más grande en móvil */
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .proyecto-content {
-    padding: 1.2rem;
-    /* Menos padding */
+    padding: 1rem;
   }
 
   .proyecto-card-title {
-    font-size: 1.3rem;
-    /* Título más pequeño */
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 
   .proyecto-description {
     font-size: 0.85rem;
     -webkit-line-clamp: 2;
-    /* Solo 2 líneas de descripción */
     line-clamp: 2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .proyecto-tech-list {
-    gap: 0.4rem;
-    margin-bottom: 1.2rem;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
   }
 
   .proyecto-tech-tag {
-    padding: 0.3rem 0.6rem;
+    padding: 0.25rem 0.5rem;
     font-size: 0.7rem;
   }
 
   .proyecto-links {
     gap: 0.5rem;
+    flex-direction: column;
   }
 
   .proyecto-link {
-    padding: 0.6rem;
+    padding: 0.5rem;
     font-size: 0.8rem;
-    border-radius: 10px;
+    border-radius: 8px;
+    text-align: center;
   }
 
   .slider-nav-btn {
@@ -310,20 +337,20 @@
 
   .proyectos-slider {
     mask-image: none;
-    padding: 1rem 1.5rem;
-    padding-right: 22vw; /* Espacio para que el último card llegue al inicio */
+    padding: 1rem;
     gap: 1rem;
     scroll-snap-type: x mandatory;
-    touch-action: pan-x pan-y; /* Horizontal: desliza el slider. Vertical: scroll de página */
-    -webkit-overflow-scrolling: touch; /* Scroll momentum en iOS */
-    overflow-x: scroll; /* Forzar scroll en el slider */
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
   }
 
   .proyecto-card {
-    scroll-snap-align: start; /* En móvil snapping por inicio, no centro */
-    transform: none !important; /* Desactiva el scale activo/inactivo en móvil */
+    scroll-snap-align: start;
+    transform: none !important;
     opacity: 1 !important;
     filter: none !important;
+    border-radius: 16px;
   }
 }
 
@@ -339,7 +366,7 @@
   opacity: 0.8;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .swipe-hint {
     display: flex;
   }

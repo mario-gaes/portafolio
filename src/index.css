@@ -2,7 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none !important; /* Usamos !important para asegurar la anulación */
+}
+
+/* Solo aplicar cursor:none en dispositivos con puntero fino (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 :root { /* Variables globales para modo claro (por defecto) */
@@ -49,14 +69,13 @@ body {
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
   margin: 0;
+  min-height: 100dvh;
 }
 
 
 
 @media screen and (max-width: 768px) {
   .content {
-    margin-top: 80px;
-    /* o lo que mida tu navbar */
+    margin-top: 60px;
   }
-  
 }

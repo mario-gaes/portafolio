@@ -31,11 +31,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   background-color: var(--color-bg-primary);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  max-width: 150px;
+  min-width: 100px;
 }
 
 .tecnologia-item:hover {
@@ -62,7 +64,7 @@
 /* --- Media Queries para una responsividad más fina --- */
 
 /* Pantallas pequeñas (teléfonos móviles, menos de 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .tecnologias-section {
     padding: 2rem 1rem; /* Menor padding en móviles */
   }
@@ -73,17 +75,17 @@
   }
 
   .tecnologias-list {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Mínimo más pequeño para caber más */
-    gap: 1.5rem; /* Menor espacio entre ítems */
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1rem;
   }
 
-  .tecnologia-logo, .tecnologia-icon {
-    width: 40px; /* Íconos un poco más pequeños */
+  .tecnologia-icon {
+    width: 40px;
     height: 40px;
   }
 
   .tecnologia-name {
-    font-size: 0.9em; /* Nombre de tecnología más pequeño */
+    font-size: 0.8em;
   }
 }
 

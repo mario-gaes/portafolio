@@ -4,7 +4,7 @@ import "./Tecnologias.css"; // Importa el archivo de estilos para este component
 // --- Importa los íconos de react-icons que vas a utilizar ---
 import {
   FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaDocker,
-  FaAws, FaLinux, FaPython, FaJava, FaFigma
+  FaAws, FaLinux, FaPython, FaJava, FaFigma, FaRobot
 } from 'react-icons/fa';
 
 import {
@@ -68,6 +68,7 @@ const Tecnologias: FunctionComponent<TecnologiasProps> = ({ onMouseEnter, onMous
     { name: "GitHub", icon: FaGithub },
     { name: "GitHub Actions", icon: SiGithubactions },
     { name: "Linux", icon: FaLinux },
+    { name: "AutoGen", icon: FaRobot },
 
     // Bases de Datos / APIs / Mensajería
     { name: "REST API", icon: TbApi },

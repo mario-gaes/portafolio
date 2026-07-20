@@ -33,8 +33,8 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["React", "Electron", "Android Studio", "Kotlin", "Node.js", "Firebase", "TwilioAPI"],
       imageUrl: p1,
       githubUrls: [
-        { name: "Aplicacion movil", url: "https://github.com/mario32111/CosturasChuyDesktopApp.git" },
-        { name: "Aplicacion de escritorio", url: "https://github.com/mario32111/CosturasChuyApp.git" },
+        { name: "Aplicacion movil", url: "https://github.com/mario-gaes/CosturasChuyDesktopApp.git" },
+        { name: "Aplicacion de escritorio", url: "https://github.com/mario-gaes/CosturasChuyApp.git" },
 
       ],
       liveUrl: null,
@@ -45,8 +45,8 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["React Native", "TypeScript", "Expo", "Supabase"],
       imageUrl: p3,
       githubUrls: [
-        { name: "Aplicacion movil", url: "https://github.com/mario32111/KapraDesign.git" },
-        { name: "Dashboard", url: "https://github.com/mario32111/KapraDesign.git" },
+        { name: "Aplicacion movil", url: "https://github.com/mario-gaes/KapraDesign.git" },
+        { name: "Dashboard", url: "https://github.com/mario-gaes/KapraDesign.git" },
 
       ],
       liveUrl: null,
@@ -57,17 +57,17 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["Flutter", "Dart", "Firebase", "Node.js", "PostgreSQL", "Python", "Azure", "Computer Vision", "Machine Learning"],
       imageUrl: p4,
       githubUrls: [
-        { name: "Repositorio", url: "https://github.com/mario32111/ProyectoGalardonDurania.git" },
+        { name: "Repositorio", url: "https://github.com/mario-gaes/ProyectoGalardonDurania.git" },
       ],
       liveUrl: null,
     },
     {
       title: "FocusTrack - Monitoreo de habitos al conducir",
-      description: "Deteccion de fatiga, somnolencia y posibles distracciones al conducir, notificaciones a contactos de confianza, agenda de viajes. Transmision de datos en tiempo real mediante MQTT a un broker en la nube",
-      techniques: ["Flutter", "Dart", "Nest.js", "Next.js", "Docker", "PostgreSQL", "Redis", "TypeScript", "Azure", "MQTT", "Python"],
+      description: "Deteccion de fatiga, somnolencia y posibles distracciones al conducir, notificaciones a contactos de confianza, agenda de viajes. Sistema multiagente enfocado en la mejora de la toma de decisiones y con capacidad para activar los actuadores del dispositivo. Transmision de datos en tiempo real mediante MQTT a un broker en la nube",
+      techniques: ["Flutter", "Dart", "Nest.js", "Next.js", "Docker", "PostgreSQL", "Redis", "TypeScript", "Azure", "MQTT", "Python", "AutoGen", "Computer Vision", "Machine Learning"],
       imageUrl: p6,
       githubUrls: [
-        { name: "Repositorio", url: "https://github.com/mario32111/FocusTrackBackend.git" }
+        { name: "Repositorio", url: "https://github.com/mario-gaes/FocusTrackBackend.git" }
       ],
       liveUrl: null,
     },
@@ -77,9 +77,9 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["React Native", "Docker", "MQTT", "PostgreSQL", "Express", "C++", "AWS"],
       imageUrl: p2,
       githubUrls: [
-        { name: "Backend", url: "https://github.com/mario32111/api-pub-sub" },
-        { name: "App", url: "https://github.com/mario32111/hydro-app" },
-        { name: "IoT", url: "https://github.com/mario32111/HydrolinkArduino" },
+        { name: "Backend", url: "https://github.com/mario-gaes/api-pub-sub" },
+        { name: "App", url: "https://github.com/mario-gaes/hydro-app" },
+        { name: "IoT", url: "https://github.com/mario-gaes/HydrolinkArduino" },
       ],
       liveUrl: null,
     },
@@ -89,8 +89,8 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["Nest.js", "Next.js", "Docker", "PostgreSQL", "Redis", "TypeScript"],
       imageUrl: p7,
       githubUrls: [
-        { name: "Backend", url: "https://github.com/mario32111/tech-shop-backend.git" },
-        { name: "Frontend", url: "https://github.com/mario32111/tech-shop-frontend.git" }
+        { name: "Backend", url: "https://github.com/mario-gaes/tech-shop-backend.git" },
+        { name: "Frontend", url: "https://github.com/mario-gaes/tech-shop-frontend.git" }
       ],
       liveUrl: null,
     },
@@ -100,7 +100,7 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["Angular", "Firebase", "TypeScript", "Bootstrap"],
       imageUrl: p5,
       githubUrls: [
-        { name: "Repositorio", url: "https://github.com/mario32111/ArtChallange" },
+        { name: "Repositorio", url: "https://github.com/mario-gaes/ArtChallange" },
       ],
       liveUrl: "https://art-challange.web.app/",
     },
@@ -110,7 +110,7 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       techniques: ["Express", "React", "Firebase", "JavaScript", "TwilioAPI", "Python"],
       imageUrl: p8,
       githubUrls: [
-        { name: "Repositorio", url: "https://github.com/mario32111/ProyectoDevCodeChallange.git" },
+        { name: "Repositorio", url: "https://github.com/mario-gaes/ProyectoDevCodeChallange.git" },
       ],
       liveUrl: null,
     },

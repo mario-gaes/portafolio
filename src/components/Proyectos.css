@@ -40,7 +40,7 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem calc(50% - 325px);
   scrollbar-width: none;
   -ms-overflow-style: none;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -51,7 +51,7 @@
 }
 
 .proyecto-card {
-  flex: 1;
+  flex: 0 0 650px;
   max-width: 650px;
   min-width: 300px;
   background: rgba(255, 255, 255, 0.03);

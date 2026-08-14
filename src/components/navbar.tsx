@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
     { label: "SOBRE MI", href: "sobre-mi" },
     { label: "TECNOLOGIAS", href: "tecnologias" },
     { label: "PROYECTOS", href: "proyectos" },
+    { label: "CERTIFICACIONES", href: "certificaciones" },
     { label: "CONTACTO", href: "contacto" }
 ];
 

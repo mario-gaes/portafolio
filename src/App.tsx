@@ -3,6 +3,7 @@ import NavBar from './components/navbar';
 import Inicio from './components/Inicio';
 import Tecnologias from './components/Tecnologias';
 import Proyectos from './components/Proyectos';
+import Certificaciones from './components/Certificaciones';
 import Contacto from './components/Contacto';
 import SobreMi from './components/SobreMi';
 import { useCallback, useState, useEffect } from 'react';
@@ -94,6 +95,12 @@ function App() {
             isMobile={isMobile}
           />
           <Proyectos
+            isInteractive={isInteractiveGlobal}
+            onMouseEnter={handleMouseEnterGlobal}
+            onMouseLeave={handleMouseLeaveGlobal}
+            isMobile={isMobile}
+          />
+          <Certificaciones
             isInteractive={isInteractiveGlobal}
             onMouseEnter={handleMouseEnterGlobal}
             onMouseLeave={handleMouseLeaveGlobal}

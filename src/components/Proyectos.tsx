@@ -28,20 +28,19 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
   // Lista de proyectos destacados
   const projects = [
     {
-      title: "CosturasChuy – Sistema POS offline first",
-      description: "Sistema punto de venta, diseñado para un taller de costuras, automatización de notificaciones vía whatsapp, Optimización de la cadena de suministro y producción mediante un ecosistema híbrido (Escritorio/Móvil)",
+      title: "CosturasChuy – Sistema POS offline-first",
+      description: "Ecosistema POS offline-first para un taller de costuras, con app de escritorio (React/Electron) y app móvil nativa (Android Studio/Kotlin) que operan sin conexión a internet mediante arquitectura de peticiones locales, manteniendo el plan gratuito de Firebase. Automatiza el seguimiento de más de 450 pedidos mensuales —antes gestionado a mano— con notificaciones al cliente vía WhatsApp (API de Twilio) y sincronización de lectores QR con impresión automática de tickets.",
       techniques: ["React", "Electron", "Android Studio", "Kotlin", "Node.js", "Firebase", "TwilioAPI"],
       imageUrl: p1,
       githubUrls: [
-        { name: "Aplicacion movil", url: "https://github.com/mario-gaes/CosturasChuyDesktopApp.git" },
-        { name: "Aplicacion de escritorio", url: "https://github.com/mario-gaes/CosturasChuyApp.git" },
-
+        { name: "Aplicación de escritorio", url: "https://github.com/mario-gaes/CosturasChuyDesktopApp.git" },
+        { name: "Aplicación móvil", url: "https://github.com/mario-gaes/CosturasChuyApp.git" },
       ],
       liveUrl: null,
     },
     {
-      title: "KapraDesign – Seguimiento de pedidos y  de tareas",
-      description: "Solución móvil diseñada para la digitalización de la cadena de producción textil. Optimiza la comunicación entre áreas mediante un sistema de estados en tiempo real, permitiendo la trazabilidad completa de los pedidos desde la recepción hasta la entrega. Utiliza una arquitectura serverless con Supabase para garantizar la sincronización inmediata de datos. Aplicacion disponible en la AppStore",
+      title: "KapraDesign – Seguimiento de pedidos y tareas",
+      description: "Digitaliza la cadena de producción textil con un dashboard en React y una app móvil (React Native/Expo), reemplazando la asignación de tareas por grupo de WhatsApp para 20 empleados por notificaciones push y asignación directa por área y responsable. Arquitectura serverless con Supabase para sincronización en tiempo real y trazabilidad completa del pedido, desde la recepción hasta la entrega, e integración con la API de Google Sheets. Publicada en la App Store; adopción total del equipo en la primera semana gracias a la optimización de UI/UX, sin capacitación adicional.",
       techniques: ["React Native", "TypeScript", "Expo", "Supabase"],
       imageUrl: p3,
       githubUrls: [
@@ -53,7 +52,7 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
     },
     {
       title: "AgroControlPro – Monitoreo y trazabilidad ganadera",
-      description: "Proyecto ganador de mención honorífica en el galardón DuranIA 2026. Sistema integral de monitoreo y trazabilidad ganadera mediante sensores IoT y Computer Vision. Implementación de modelos para el conteo automatizado de ganado y análisis de postura (detección de ejemplares en pie o echados) para evaluar el bienestar animal. Incluye algoritmos de Machine Learning para detección de fiebre/celo y un Agente de IA para la automatización de procesos administrativos y analisis de documentos.",
+      description: "Mención honorífica ante 10 equipos competidores en el galardón estatal DuranIA 2026. MVP de trazabilidad bovina compuesto por app móvil, dispositivo IoT y backend modular en microservicios desplegado con Azure Container Apps. Visión por computadora para conteo automatizado de ganado y análisis de postura (en pie o echado), y modelos de Machine Learning que predicen celo y fiebre a partir de telemetría IoT para optimizar la toma de decisiones. Incluye un agente de IA (Azure OpenAI) para automatizar procesos administrativos y análisis de documentos.",
       techniques: ["Flutter", "Dart", "Firebase", "Node.js", "PostgreSQL", "Python", "Azure", "Computer Vision", "Machine Learning"],
       imageUrl: p4,
       githubUrls: [
@@ -62,8 +61,8 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       liveUrl: null,
     },
     {
-      title: "FocusTrack - Monitoreo de habitos al conducir",
-      description: "Deteccion de fatiga, somnolencia y posibles distracciones al conducir, notificaciones a contactos de confianza, agenda de viajes. Sistema multiagente enfocado en la mejora de la toma de decisiones y con capacidad para activar los actuadores del dispositivo. Transmision de datos en tiempo real mediante MQTT a un broker en la nube",
+      title: "FocusTrack – Monitoreo de hábitos al conducir",
+      description: "Sistema multiagente (AutoGen) que detecta fatiga, somnolencia y distracciones al conducir mediante Computer Vision y Machine Learning, enviando notificaciones a contactos de confianza e integrando una agenda de viajes. Los agentes de IA apoyan la toma de decisiones y pueden activar directamente los actuadores del dispositivo. Backend en Express.js con transmisión de datos en tiempo real vía MQTT a un broker en la nube bajo protocolos seguros con cifrado de la informacion2.",
       techniques: ["Flutter", "Dart", "Nest.js", "Next.js", "Docker", "PostgreSQL", "Redis", "TypeScript", "Azure", "MQTT", "Python", "AutoGen", "Computer Vision", "Machine Learning"],
       imageUrl: p6,
       githubUrls: [
@@ -73,7 +72,7 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
     },
     {
       title: "HydroLink – Sistema de riego inteligente",
-      description: "Sistema IoT integral para la gestión automatizada y eficiente del riego agrícola. Monitorizacion en tiempo real mediante sensores de humedad y temperatura para recopilar datos en tiempo real, optimizando el uso del agua mediante algoritmos inteligentes. Backend escalable en AWS, API REST, y app móvil para monitoreo.",
+      description: "Sistema IoT para riego agrícola automatizado: sensores de humedad y temperatura envían datos en tiempo real vía MQTT, optimizando el uso del agua mediante algoritmos inteligentes. Backend escalable en AWS con API REST y app móvil (React Native) para monitoreo remoto del sistema de riego.",
       techniques: ["React Native", "Docker", "MQTT", "PostgreSQL", "Express", "C++", "AWS"],
       imageUrl: p2,
       githubUrls: [
@@ -85,7 +84,7 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
     },
     {
       title: "Microservices-TechShop",
-      description: "E-commerce de tecnología basado en microservicios con Nest.js y Next.js. Autenticación segura, gestión de productos, carrito de compras y administración. Docker para despliegue y Redis para caché.",
+      description: "Plataforma e-commerce bajo arquitectura de microservicios (auth, catálogo, pagos) con API Gateway, backend en NestJS y Next.js con SSR para optimizar SEO, escalabilidad y latencia, con caché en Redis. Pipeline de CI/CD con GitHub Actions y despliegue automatizado a AWS EC2, con pruebas automatizadas y linting (ESLint) como requisitos previos al deploy.",
       techniques: ["Nest.js", "Next.js", "Docker", "PostgreSQL", "Redis", "TypeScript"],
       imageUrl: p7,
       githubUrls: [
@@ -96,7 +95,7 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
     },
     {
       title: "ArtChallange – Red para Artistas",
-      description: "Red social para artistas centrada en retos semanales. Creación y edición de obras, desafíos y retroalimentación comunitaria. Autenticación y perfiles.",
+      description: "Red social para artistas centrada en retos semanales: creación y edición de obras, participación en desafíos y retroalimentación de la comunidad, con autenticación y perfiles de usuario.",
       techniques: ["Angular", "Firebase", "TypeScript", "Bootstrap"],
       imageUrl: p5,
       githubUrls: [
@@ -105,8 +104,8 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       liveUrl: "https://art-challange.web.app/",
     },
     {
-      title: "SAI -  Agente conversacional para atencion de emergencias",
-      description: "Sistema de atencion de emergencias desarollado en el devCodeChallange 2025, con el fin de identificar llamadas falsas y dar prioridad a las llamadas reales para la mejor gestion de recursos de emergencia",
+      title: "SAI – Agente conversacional para atención de emergencias",
+      description: "Agente conversacional para atención de emergencias, desarrollado en el devCodeChallenge 2025: identifica llamadas falsas y prioriza las llamadas reales para optimizar la asignación de recursos de emergencia.",
       techniques: ["Express", "React", "Firebase", "JavaScript", "TwilioAPI", "Python"],
       imageUrl: p8,
       githubUrls: [

@@ -2,7 +2,7 @@
 import { type FunctionComponent, useRef, useState, useEffect } from "react";
 import "./Proyectos.css";
 
-import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaLock } from 'react-icons/fa';
 
 import p1 from "../assets/p1.png";
 import p2 from "../assets/p2.jpg";
@@ -32,23 +32,18 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
       description: "Ecosistema POS offline-first para un taller de costuras, con app de escritorio (React/Electron) y app móvil nativa (Android Studio/Kotlin) que operan sin conexión a internet mediante arquitectura de peticiones locales, manteniendo el plan gratuito de Firebase. Automatiza el seguimiento de más de 450 pedidos mensuales —antes gestionado a mano— con notificaciones al cliente vía WhatsApp (API de Twilio) y sincronización de lectores QR con impresión automática de tickets.",
       techniques: ["React", "Electron", "Android Studio", "Kotlin", "Node.js", "Firebase", "TwilioAPI"],
       imageUrl: p1,
-      githubUrls: [
-        { name: "Aplicación de escritorio", url: "https://github.com/mario-gaes/CosturasChuyDesktopApp.git" },
-        { name: "Aplicación móvil", url: "https://github.com/mario-gaes/CosturasChuyApp.git" },
-      ],
+      githubUrls: [],
       liveUrl: null,
+      isPrivate: true,
     },
     {
       title: "KapraDesign – Seguimiento de pedidos y tareas",
       description: "Digitaliza la cadena de producción textil con un dashboard en React y una app móvil (React Native/Expo), reemplazando la asignación de tareas por grupo de WhatsApp para 20 empleados por notificaciones push y asignación directa por área y responsable. Arquitectura serverless con Supabase para sincronización en tiempo real y trazabilidad completa del pedido, desde la recepción hasta la entrega, e integración con la API de Google Sheets. Publicada en la App Store; adopción total del equipo en la primera semana gracias a la optimización de UI/UX, sin capacitación adicional.",
       techniques: ["React Native", "TypeScript", "Expo", "Supabase"],
       imageUrl: p3,
-      githubUrls: [
-        { name: "Aplicacion movil", url: "https://github.com/mario-gaes/KapraDesign.git" },
-        { name: "Dashboard", url: "https://github.com/mario-gaes/KapraDesign.git" },
-
-      ],
+      githubUrls: [],
       liveUrl: null,
+      isPrivate: true,
     },
     {
       title: "AgroControlPro – Monitoreo y trazabilidad ganadera",
@@ -178,6 +173,12 @@ const Proyectos: FunctionComponent<ProyectosProps> = ({ onMouseEnter, onMouseLea
                   ))}
                 </div>
                 <div className="proyecto-links">
+                  {project.isPrivate && (
+                    <span className="proyecto-link private" aria-label="Proyecto privado, código de cliente">
+                      <FaLock size={14} />
+                      <span>Proyecto privado (cliente)</span>
+                    </span>
+                  )}
                   {project.githubUrls.map((repo, repoIndex) => (
                     <a
                       key={repoIndex}

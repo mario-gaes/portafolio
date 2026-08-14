@@ -185,6 +185,18 @@
   filter: brightness(1.2);
 }
 
+.proyecto-link.private {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  cursor: default;
+}
+
+.proyecto-link.private:hover {
+  transform: none;
+  filter: none;
+}
+
 /* Slider Controls */
 .slider-nav-btn {
   position: absolute;
